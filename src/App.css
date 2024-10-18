@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
+body {
   min-height: 100vh;
+  padding: 20px;
+}
+
+.main {
+  border: 3px solid black;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border-radius: 10px;
+}
+
+.header {
+  text-align: center;
+  color: gray;
+  margin-top: 10px;
+}
+
+/* Search */
+.input-form {
+  margin: 15px 30px;
+  width: 100%;
+  max-width: 900px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 20px;
 }
 
-.App-link {
-  color: #61dafb;
+.input-bar {
+  width: 800px;
+  max-width: 100%;
+  height: 40px;
+  padding: 0 10px;
+  font-size: 16px;
+  border-radius: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button {
+  height: 40px;
+  width: 80px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: background-color 0.3;
+}
+
+.button:hover {
+  background-color: lightblue;
+}
+.button:active {
+  background-color: red;
+}
+
+/* Tasks */
+
+.tasks {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.box {
+  border: 3px solid black;
+  width: 600px;
+  max-width: 100%;
+  height: 600px;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  color: cadetblue;
+  font-size: 25px;
+}
+
+.checklist-item {
+  margin: 10px 15px;
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.2fr;
+  align-items: center;
+  font-size: 20px;
+  background-color: beige;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid black;
+}
+
+.task-description {
+  padding: 15px 10px;
+  width: 85%;
+}
+
+.delete-button {
+  padding: 5px;
+  font-size: 15px;
+  width: 100%;
+  cursor: pointer;
+}
+
+.checklist-item {
+  display: flex;
+  margin: 10px 15px;
+  font-size: 20px;
+  background-color: beige;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.button-time {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.added-time {
+  font-size: 13px;
 }
